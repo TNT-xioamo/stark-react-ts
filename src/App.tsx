@@ -4,7 +4,7 @@ import logo from './logo.svg'
 
 function App() {
   return (
-    <div className="App"></div>
+    <div className="App">首页</div>
   )
 }
 
