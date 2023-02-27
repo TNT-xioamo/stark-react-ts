@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
-import { Link, BrowserRouter } from 'react-router-dom'
+
 import JMSLayout from './layout'
 
 function App() {
