@@ -26,7 +26,7 @@ export default memo(function JMSLayout () {
           <Button onClick={() => handleToVue()}>微前端Vue</Button>
         </Header>
         <Content style={{ margin: '24px 16px 0' }}>
-          <div id='vue-quality-education' />
+          {/* <div id='vue-quality-education' /> */}
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
       </Layout>
