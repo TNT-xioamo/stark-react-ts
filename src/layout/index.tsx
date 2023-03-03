@@ -14,6 +14,7 @@ export default memo(function JMSLayout () {
 
   const { token: { colorBgContainer }, } = theme.useToken()
   const navigate = useNavigate()
+  
   const handleToVue = () => {
     action.setGlobalState({ token: 'admin' })
     navigate('/vue-quality-education')
@@ -23,10 +24,10 @@ export default memo(function JMSLayout () {
       <Sider trigger={null} collapsible collapsed={collapsed}></Sider>
       <Layout>
         <Header style={{ padding: 0, background: colorBgContainer }} >
-          <Button onClick={() => handleToVue()}>微前端Vue</Button>
+          {/* <Button onClick={() => handleToVue()}>微前端Vue</Button> */}
         </Header>
         <Content style={{ margin: '24px 16px 0' }}>
-          {/* <div id='vue-quality-education' /> */}
+          
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
       </Layout>

@@ -1,20 +1,18 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
+import { FloatButton } from 'antd'
 
-import JMSLayout from './layout'
+
+import JMSEducation from './views/microservices/education'
 
 function App() {
   return (
     <Provider store={store}>
-      <JMSLayout />
+      
+      <FloatButton.Group trigger="hover"><FloatButton /></FloatButton.Group>
+      <JMSEducation />
     </Provider>
-    // <div className="App">
-    //   <BrowserRouter>
-    //     <h3><Link to="/vue-quality-education">微前端Vue</Link></h3>
-    //   </BrowserRouter>
-    //   <div id='vue-quality-education' />
-    // </div>
   )
 }
 

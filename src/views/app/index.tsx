@@ -1,14 +1,16 @@
 import React, { memo, Suspense } from 'react'
-import { renderRoutes } from 'react-router-config'
-import routes from '@/router'
 
 import { Spin } from 'antd'
+
+import JMSLayout from ''
 
 export default memo(function AppWrapper () {
 
   return (
     <>
-      <Suspense fallback={<Spin />}>{renderRoutes(routes)}</Suspense>
+      <Suspense fallback={<Spin />}>
+        <JMSLayout />
+      </Suspense>
     </>
   )
 })
