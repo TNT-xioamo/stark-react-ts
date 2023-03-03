@@ -1,11 +1,12 @@
 import React, { memo, Suspense } from 'react'
-import { Card, Spin } from 'antd'
+import { Spin } from 'antd'
 import { Outlet } from 'react-router-dom'
 
 
-export default memo(function JMSLayoutContent() {
+export default memo(function JMSLayoutMain() {
   return (
     <>
+      123123
       <Suspense fallback={<Spin />}><Outlet /></Suspense>
     </>
   )

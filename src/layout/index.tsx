@@ -1,9 +1,11 @@
 import React, { memo, useState } from 'react'
-import { Layout, Button, theme } from 'antd'
-
 import { useNavigate } from 'react-router-dom'
-
 import action from '../shared/actions'
+import { Layout, Button, theme } from 'antd'
+import JMSLayoutContent from '@/layout/content'
+
+
+
 
 const { Header, Sider, Content, Footer } = Layout
 
@@ -26,9 +28,7 @@ export default memo(function JMSLayout () {
         <Header style={{ padding: 0, background: colorBgContainer }} >
           {/* <Button onClick={() => handleToVue()}>微前端Vue</Button> */}
         </Header>
-        <Content style={{ margin: '24px 16px 0' }}>
-          
-        </Content>
+        <Content><JMSLayoutContent /></Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
       </Layout>
     </Layout>

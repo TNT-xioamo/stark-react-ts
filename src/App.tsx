@@ -4,12 +4,13 @@ import store from './store'
 import { FloatButton } from 'antd'
 
 
-import JMSEducation from './views/microservices/education'
+import JMSEducation from '@/views/microservices/education'
+import JMSLayout from '@/layout'
 
 function App() {
   return (
     <Provider store={store}>
-      
+      <JMSLayout />
       <FloatButton.Group trigger="hover"><FloatButton /></FloatButton.Group>
       <JMSEducation />
     </Provider>
