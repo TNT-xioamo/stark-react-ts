@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import action from '../shared/actions'
-import { Layout, Button, theme } from 'antd'
+import { Layout, theme } from 'antd'
 import JMSLayoutContent from '@/layout/content'
 
 
