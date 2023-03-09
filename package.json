@@ -151,6 +151,7 @@
     ]
   },
   "devDependencies": {
-    "@types/redux-immutable": "^4.0.3"
+    "@types/redux-immutable": "^4.0.3",
+    "@types/styled-components": "^5.1.26"
   }
 }
