@@ -4,11 +4,7 @@ import action from '../shared/actions'
 import { Layout, theme } from 'antd'
 import JMSLayoutContent from '@/layout/content'
 
-
-
-
 const { Header, Sider, Content, Footer } = Layout
-
 
 export default memo(function JMSLayout () {
 
@@ -23,13 +19,13 @@ export default memo(function JMSLayout () {
   }
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}></Sider>
+      <Sider trigger={null} theme={'light'} collapsible collapsed={collapsed} ></Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }} >
-          {/* <Button onClick={() => handleToVue()}>微前端Vue</Button> */}
-        </Header>
+        {/* <Header style={{ padding: 0, background: colorBgContainer }} >
+          <Button onClick={() => handleToVue()}>微前端Vue</Button>
+        </Header> */}
         <Content><JMSLayoutContent /></Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+        {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer> */}
       </Layout>
     </Layout>
   )

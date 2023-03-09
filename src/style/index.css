@@ -20,3 +20,7 @@ code {
 #root .ant-layout {
   height: 100%;
 }
+
+#root .ant-layout .ant-layout-sider-light {
+  background: #fafafa;
+}

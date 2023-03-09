@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './style/index.css'
+import { ConfigProvider } from 'antd'
 
 import { registerMicroApps, start } from 'qiankun'
 
@@ -29,7 +30,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <ConfigProvider direction="ltr" theme={{ token: { colorPrimary: '#00b96b' }, }} componentSize={'small'}>
+        <App />
+      </ConfigProvider>
     </Router>
   </React.StrictMode>
 );
