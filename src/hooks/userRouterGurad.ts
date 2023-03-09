@@ -39,7 +39,7 @@ function guard(location: Location, navigate: NavigateFunction,  routes: RouteObj
   return true
 }
 
-export const RouterGurad = (routes:any) => { //  :RouteObject[]
+export const RouterGurad = (routes: any) => { //  :RouteObject[]
   const location = useLocation()
   const navigate = useNavigate()
   useEffect(() => {
