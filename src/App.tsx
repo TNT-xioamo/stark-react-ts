@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 import { Provider } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import store from './store'
+import action from '@/shared/actions'
 import { FloatButton, Modal } from 'antd'
 import { CommentOutlined, SettingOutlined, HeatMapOutlined } from '@ant-design/icons'
 
 
 
-import JMSEducation from '@/views/microservices/education'
+
 import JMSLayout from '@/layout'
 
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const navigate = useNavigate()
   
   const handleSetIsModalOpen = (status: boolean) => {
     setIsModalOpen(status)
@@ -20,8 +24,16 @@ function App() {
   const handleFloatSys = () => {
     handleSetIsModalOpen(true)
   }
-  const handleFloatNotice = () => {}
 
+  const handleToVue = () => {
+    action.setGlobalState({ token: 'admin' })
+    navigate('/vue-quality-education')
+  }
+
+  const handleFloatNotice = () => {
+    handleToVue()
+  }
+ 
   const handleModalOk = () => {
     handleSetIsModalOpen(false)
   }
@@ -36,7 +48,6 @@ function App() {
         <FloatButton icon={<HeatMapOutlined />} onClick={ () => handleFloatNotice() } />
       </FloatButton.Group>
       <Modal open={isModalOpen} onOk={handleModalOk} onCancel={handleModalCancel}></Modal>
-      <JMSEducation />
       <FloatButton.BackTop />
     </Provider>
   )

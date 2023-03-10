@@ -6,7 +6,9 @@ import { LeaderAside } from './sider-style'
 export default memo(function JMSResizebar() {
   return (
     <LeaderAside>
-      { <CaretLeftOutlined /> }
+      <div className='resize-bar-slu flex-center'>
+        { <CaretLeftOutlined /> }
+      </div>
       {/* <CaretRightOutlined /> */}
     </LeaderAside>
   )

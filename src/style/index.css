@@ -24,3 +24,9 @@ code {
 #root .ant-layout .ant-layout-sider-light {
   background: #fafafa;
 }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

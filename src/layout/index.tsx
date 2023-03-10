@@ -1,8 +1,9 @@
 import React, { memo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import action from '../shared/actions'
-import { Layout, theme } from 'antd'
+
+import { Layout, theme, Button } from 'antd'
 import JMSLayoutContent from '@/layout/content'
+import JMSResizebar from './sider/sider-resizebar'
 
 const { Header, Sider, Content, Footer } = Layout
 
@@ -11,19 +12,15 @@ export default memo(function JMSLayout () {
   const [collapsed, setCollapsed] = useState(false)
 
   const { token: { colorBgContainer }, } = theme.useToken()
-  const navigate = useNavigate()
   
-  const handleToVue = () => {
-    action.setGlobalState({ token: 'admin' })
-    navigate('/vue-quality-education')
-  }
+
   return (
     <Layout>
-      <Sider trigger={null} theme={'light'} collapsible collapsed={collapsed} ></Sider>
+      <Sider trigger={null} theme={'light'} width={ 254 } collapsible collapsed={collapsed} >
+        <JMSResizebar />
+      </Sider>
       <Layout>
-        {/* <Header style={{ padding: 0, background: colorBgContainer }} >
-          <Button onClick={() => handleToVue()}>微前端Vue</Button>
-        </Header> */}
+        {/* <Header style={{ padding: 0, background: colorBgContainer }} ><Button onClick={() => handleToVue()}>微前端Vue</Button></Header> */}
         <Content><JMSLayoutContent /></Content>
         {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer> */}
       </Layout>
