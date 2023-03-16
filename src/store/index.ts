@@ -1,10 +1,11 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit'
-import TodosReducer, { TODOS_FEATURE_KEY } from './reducer'
+import StingReducer from './reducers/settings'
+import { SETTING_FEATURE_KEY } from './store-type'
 
 
 export default configureStore({
   reducer: {
-    [TODOS_FEATURE_KEY]: TodosReducer,
+    [SETTING_FEATURE_KEY]: StingReducer,
   },
-  devTools: process.env.NODE_ENV !== "production",
+  devTools: process.env.NODE_ENV !== 'production',
 })
