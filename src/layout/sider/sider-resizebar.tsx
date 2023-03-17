@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { SET_SETTINGS_MENU } from '@/store/reducers/settings'
+import SET_SETTINGS_MENU from '@/store/reducers/settings'
 
 import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons'
 import { LeaderAside } from './sider-style'
@@ -11,8 +11,7 @@ export default memo(function JMSResizebar() {
   const dispatch = useDispatch()
 
   const handleSdise = () => {
-    // dispatch(SET_SETTINGS_MENU)
-    
+    // dispatch(SET_SETTINGS_MENU(settings.menu))
   }
   return (
     <LeaderAside>

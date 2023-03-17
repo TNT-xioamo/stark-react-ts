@@ -8,7 +8,7 @@ const { reducer: StingReducer, actions } = createSlice({
     menu: true // 折叠与展开
   },
   reducers: {
-    SET_SETTINGS_MENU(state: any, action) {
+    SET_SETTINGS_MENU(state: any) {
       console.log(state)
       state.menu = !state.menu
     }
