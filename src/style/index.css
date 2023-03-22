@@ -20,6 +20,9 @@ code {
 #root .ant-layout {
   height: 100%;
 }
+#root .ant-layout .app-side {
+  position: relative;
+}
 
 #root .ant-layout .ant-layout-sider-light {
   background: #fafafa;

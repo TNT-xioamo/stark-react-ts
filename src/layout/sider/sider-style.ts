@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 
 export const LeaderAside = styled.div `
-  width: 32px;
-  height: 70px;
   position: absolute;
   top: 183px;
-  left: 237px;
+  left: ${(props: any) => (props.style?.left)}px;
   cursor: pointer;
   .resize-bar-slu{
     height: 44px;
@@ -17,6 +15,5 @@ export const LeaderAside = styled.div `
     line-height: 28px;
     text-align: center;
     z-index: 999;
-    margin-left: 10px;
   }
 `
