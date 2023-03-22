@@ -15,7 +15,7 @@ export default memo(function JMSResizebar(props) {
   }
   // 
   return (
-    <LeaderAside style={{ left: menuSide - (14 / 2) }}>
+    <LeaderAside>
       <div className='resize-bar-slu flex-center' onClick={ () => handleSdise() }>{ !collapse ? <CaretLeftOutlined /> : <CaretRightOutlined /> }</div>
     </LeaderAside>
   )

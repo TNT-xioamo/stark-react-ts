@@ -3,7 +3,10 @@ import styled from 'styled-components'
 export const LeaderAside = styled.div `
   position: absolute;
   top: 183px;
-  left: ${(props: any) => (props.style?.left)}px;
+  /* left: ${(props: any) => (props.style?.left)}px; */
+  left: auto;
+  right: 0;
+  transform: translateX(50%);
   cursor: pointer;
   .resize-bar-slu{
     height: 44px;

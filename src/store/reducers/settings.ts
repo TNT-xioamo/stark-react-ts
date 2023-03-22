@@ -13,8 +13,7 @@ const { reducer: StingReducer, actions } = createSlice({
   reducers: {
     SET_SETTINGS_MENU(state: any) {
       state.collapse = !state.collapse
-      const vnode: HTMLElement | null = document.querySelector('.ant-layout-sider')
-      console.log(vnode?.clientWidth)
+      // const vnode: HTMLElement | null = document.querySelector('.ant-layout-sider')
     },
     SET_SETTINGS_MENU_SIDE(state: any, data) {
       state.menuSide = data.payload

@@ -20,7 +20,7 @@ code {
 #root .ant-layout {
   height: 100%;
 }
-#root .ant-layout .app-side {
+#root .ant-layout .app-side .ant-layout-sider-children {
   position: relative;
 }
 
