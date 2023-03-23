@@ -7,7 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import store from './store'
 import action from '@/shared/actions'
-import { FloatButton, Modal } from 'antd'
+import { FloatButton, Popover } from 'antd'
 import { CommentOutlined, SettingOutlined, HeatMapOutlined } from '@ant-design/icons'
 
 
@@ -51,11 +51,12 @@ function App() {
       <PersistGate loading={null} persistor={persistor}>
         <JMSLayout />
       </PersistGate>
-      <FloatButton.Group className='rotate-scale-up_hover' trigger="click" icon={<SettingOutlined />}>
-        <FloatButton icon={<CommentOutlined />} onClick={ () => handleFloatSys() } />
+      <FloatButton.Group trigger="click" icon={<SettingOutlined />}>
+        <Popover trigger="click">
+          <FloatButton icon={<CommentOutlined />} onClick={ () => handleFloatSys() } />
+        </Popover>
         <FloatButton icon={<HeatMapOutlined />} onClick={ () => handleFloatNotice() } />
       </FloatButton.Group>
-      <Modal open={isModalOpen} onOk={handleModalOk} onCancel={handleModalCancel}></Modal>
       <FloatButton.BackTop />
     </Provider>
   )
