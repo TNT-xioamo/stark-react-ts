@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './style/index.css'
+import './style/animista.css'
 import './style/variable.css'
 import { ConfigProvider } from 'antd'
 
