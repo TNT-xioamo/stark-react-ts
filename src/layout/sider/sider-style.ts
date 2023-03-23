@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const LeaderAside = styled.div `
   position: absolute;
   top: 183px;
-  /* left: ${(props: any) => (props.style?.left)}px; */
   left: auto;
   right: 0;
   transform: translateX(50%);
   cursor: pointer;
+  z-index: 11;
   .resize-bar-slu{
     height: 44px;
     width: 14px;
@@ -17,6 +17,41 @@ export const LeaderAside = styled.div `
     border-radius: 8px;
     line-height: 28px;
     text-align: center;
-    z-index: 999;
   }
+`
+export const DragAside = styled.div `
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  right: -6px;
+  width: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: col-resize;
+  /* background-color: var(--sk-yuque-grey-6); */
+  height: 100%;
+  &:hover {
+    border-left: 2px dashed var(--sk-yuque-grey-400);
+  }
+  /* ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--sk-yuque-green-1);
+    transition: all .2s ease-in-out;
+  }
+  ::after {
+    content: "";
+    transition: backgroundcolor .2s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    width: 100%;
+    border-right: 1px solid var(--sk-sea-blue-50);
+  } */
 `

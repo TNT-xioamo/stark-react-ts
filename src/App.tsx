@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { Provider } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
+import { persistStore } from 'redux-persist'
+import { PersistGate } from 'redux-persist/integration/react'
+
 import store from './store'
 import action from '@/shared/actions'
 import { FloatButton, Modal } from 'antd'
@@ -11,6 +15,7 @@ import { CommentOutlined, SettingOutlined, HeatMapOutlined } from '@ant-design/i
 
 import JMSLayout from '@/layout'
 
+let persistor = persistStore(store)
 
 function App() {
   
@@ -43,7 +48,9 @@ function App() {
   }
   return (
     <Provider store={store}>
-      <JMSLayout />
+      <PersistGate loading={null} persistor={persistor}>
+        <JMSLayout />
+      </PersistGate>
       <FloatButton.Group className='rotate-scale-up_hover' trigger="click" icon={<SettingOutlined />}>
         <FloatButton icon={<CommentOutlined />} onClick={ () => handleFloatSys() } />
         <FloatButton icon={<HeatMapOutlined />} onClick={ () => handleFloatNotice() } />
