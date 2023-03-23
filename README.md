@@ -1,5 +1,5 @@
 # stark-clone
-> 这是一个极简的 react 模仿语雀的项目，引入了乾坤作为微前端解决方案
+> 这是一个极简的 react 项目，引入了乾坤作为微前端解决方案
 
 ## Build Setup
 ```bash
