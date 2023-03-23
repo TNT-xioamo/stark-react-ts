@@ -1,6 +1,6 @@
 import { createStorage } from './storage'
 
-const prefixKey: String = 'Vue_Naive_Admin_'
+const prefixKey: String = 'Stark'
 
 export const createLocalStorage = function (option: any = {}) {
   return createStorage({

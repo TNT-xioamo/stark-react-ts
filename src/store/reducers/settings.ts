@@ -24,6 +24,6 @@ const { reducer: StingReducer, actions } = createSlice({
   }
 })
 
-export const { SET_SETTINGS_MENU, SET_SETTINGS_FOLD_ICON } = actions
+export const { SET_SETTINGS_MENU, SET_SETTINGS_FOLD_ICON, SET_SETTINGS_MENU_SIDE } = actions
 
 export default StingReducer
