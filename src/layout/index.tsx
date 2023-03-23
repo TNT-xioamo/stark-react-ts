@@ -32,10 +32,3 @@ export default memo(function JMSLayout () {
     </Layout>
   )
 })
-
-  // "proxy": {
-  //   "/api/**": {
-  //     "target": "http://192.168.28.56:3100/api",
-  //     "changeOrigin": true
-  //   }
-  // }

@@ -7,7 +7,7 @@ import { LeaderAside } from './sider-style'
 
 
 export default memo(function JMSResizebar(props) {
-  const { collapse, menuSide }: any = useSelector((state: any) => state?.settings)
+  const { collapse }: any = useSelector((state: any) => state?.settings)
   const dispatch = useDispatch()
 
   const handleSdise = () => {

@@ -13,6 +13,7 @@ import JMSLayout from '@/layout'
 
 
 function App() {
+  
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const navigate = useNavigate()
@@ -43,7 +44,7 @@ function App() {
   return (
     <Provider store={store}>
       <JMSLayout />
-      <FloatButton.Group trigger="click" icon={<SettingOutlined />}>
+      <FloatButton.Group className='rotate-scale-up_hover' trigger="click" icon={<SettingOutlined />}>
         <FloatButton icon={<CommentOutlined />} onClick={ () => handleFloatSys() } />
         <FloatButton icon={<HeatMapOutlined />} onClick={ () => handleFloatNotice() } />
       </FloatButton.Group>
@@ -54,3 +55,11 @@ function App() {
 }
 
 export default App;
+
+
+  // "proxy": {
+  //   "/api/**": {
+  //     "target": "http://192.168.28.56:3100/api",
+  //     "changeOrigin": true
+  //   }
+  // }
