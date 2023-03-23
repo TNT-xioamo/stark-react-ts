@@ -45,7 +45,6 @@ export function fetchRequest(url: string, method: string = 'GET', params:any = '
     "accessToken": token,
     ...config
   }
-  console.log('request url:', url, params)
   if(params === '') {
     return new Promise((resolve, reject) => {
       fetch(`${BASE_URL}/${url}`, {
