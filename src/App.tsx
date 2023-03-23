@@ -52,7 +52,7 @@ function App() {
         <JMSLayout />
       </PersistGate>
       <FloatButton.Group trigger="click" icon={<SettingOutlined />}>
-        <Popover trigger="click">
+        <Popover trigger="click" placement="leftTop" arrow={false} content={ <a onClick={() => {}}>Close</a> }>
           <FloatButton icon={<CommentOutlined />} onClick={ () => handleFloatSys() } />
         </Popover>
         <FloatButton icon={<HeatMapOutlined />} onClick={ () => handleFloatNotice() } />
