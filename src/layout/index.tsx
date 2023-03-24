@@ -5,12 +5,13 @@ import { SET_SETTINGS_FOLD_ICON, SET_SETTINGS_MENU_SIDE } from '@/store/reducers
 
 import { Layout, theme } from 'antd'
 import JMSLayoutContent from '@/layout/content'
-import JMSResizebar from './sider/sider-resizebar'
 import { DragAside } from './sider/sider-style'
+import JMSResizebar from './sider/sider-resizebar'
+import JMSUserInfo from '@/views/homePopoverModule/module-user-info'
 const { Sider, Content,  } = Layout
 
 export default memo(function JMSLayout () {
-  const { menuSide, foldIcon, themes, collapse }: any = useSelector((state: any) => state?.settings)
+  const { menuSide, foldIcon, themes, collapse, sysLogo }: any= useSelector((state: any) => state?.settings)
   const [draggable, setDraggable] = useState(false)
 
   const dispatchFoldIcon = useDispatch()
@@ -41,6 +42,7 @@ export default memo(function JMSLayout () {
       <Sider className="app-side" trigger={null} theme={themes} width={ menuSide } collapsible collapsed={collapse}  onMouseEnter={() => handleSetIsHovered(true)} onMouseLeave={() => handleSetIsHovered(false)}>
         { foldIcon ? <JMSResizebar /> : '' }
         <DragAside onMouseDown={event => handleMouseDown(event)} />
+        <JMSUserInfo logo={sysLogo}></JMSUserInfo>
       </Sider>
       <Layout>
         <Content><JMSLayoutContent /></Content>

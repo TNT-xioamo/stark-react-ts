@@ -8,7 +8,8 @@ const { reducer: StingReducer, actions } = createSlice({
     collapse: false, // 折叠与展开
     menuSide: 254, // 侧边宽度
     foldIcon: false, // 收起按钮
-    themes: 'light' // 主题
+    themes: 'light', // 主题
+    sysLogo: 'https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*Ug-0S7mWpx8AAAAAAAAAAAAADvuFAQ/original'
   },
   reducers: {
     SET_SETTINGS_MENU(state: any) {
@@ -20,6 +21,9 @@ const { reducer: StingReducer, actions } = createSlice({
     },
     SET_SETTINGS_FOLD_ICON(state: any, data) {
       state.foldIcon = data.payload
+    },
+    SET_SETTINGS_LOGO(state: any, data) {
+      state.sysLogo = data.payload
     }
   }
 })
