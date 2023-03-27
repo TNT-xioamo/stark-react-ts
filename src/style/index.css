@@ -23,9 +23,13 @@ code {
   height: 100%;
   background: var(--sk-white);
 }
-#root .ant-layout .app-side .ant-layout-sider-children {
+#root .ant-layout .app-side {
+  
   position: relative;
   padding: 10px 0 0 0;
+}
+#root .ant-layout .app-side .ant-layout-sider-children {
+  overflow: hidden;
 }
 
 #root .ant-layout .ant-layout-sider-light {

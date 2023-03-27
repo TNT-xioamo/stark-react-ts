@@ -29,7 +29,7 @@ export default memo(function JMSLayout () {
 
   const handleMouseMove = (e: MouseEvent) => {
     if (!draggable) return
-    if (e.screenX > window.screen.availWidth / 3 || e.screenX < 20) return
+    if (e.screenX > window.screen.availWidth / 3 || e.screenX < 45) return
     dispatchSide(SET_SETTINGS_MENU_SIDE(e.screenX))
   }
 
@@ -39,7 +39,7 @@ export default memo(function JMSLayout () {
 
   return (
     <Layout onMouseMove={event => handleMouseMove(event)} onMouseUp={event => handleMouseUp(event)}>
-      <Sider className="app-side" trigger={null} theme={themes} width={ menuSide } collapsible collapsed={collapse}  onMouseEnter={() => handleSetIsHovered(true)} onMouseLeave={() => handleSetIsHovered(false)}>
+      <Sider className="app-side" trigger={null} collapsedWidth={49}  theme={themes} width={ menuSide } collapsible collapsed={collapse}  onMouseEnter={() => handleSetIsHovered(true)} onMouseLeave={() => handleSetIsHovered(false)}>
         { foldIcon ? <JMSResizebar /> : '' }
         <DragAside onMouseDown={event => handleMouseDown(event)} />
         <JMSUserInfo logo={sysLogo}></JMSUserInfo>

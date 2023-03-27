@@ -3,7 +3,7 @@ import { Tooltip, Avatar } from 'antd'
 import { UserInfo } from './module-style'
 import { BellOutlined, UserOutlined } from '@ant-design/icons'
 
-export default memo(function JMSUserInfo(props: any) {  
+export default memo(function JMSUserInfo(props: any) {
   return (
     <>
       <UserInfo className='f-c-s-b sidebar-user-info'>
@@ -12,9 +12,7 @@ export default memo(function JMSUserInfo(props: any) {
         </div>
         <div className='index-module_right f-c-s-b'>
           <div className='message flex-center'>
-            <Tooltip title="消息中心" overlayStyle={{ fontSize: 12 }}>
-              <BellOutlined />
-            </Tooltip>
+            <Tooltip title="消息中心" overlayStyle={{ fontSize: 12 }}><BellOutlined /></Tooltip>
           </div>
           <div className='avatar flex-center'><Avatar size={24} icon={<UserOutlined />} /></div>
         </div>
