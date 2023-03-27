@@ -11,5 +11,25 @@ export const UserInfo = styled.div `
       }
     }
   }
-  .index-module_right {}
+  .index-module_right {
+    .message {
+      width: 28px;
+      height: 28px;
+      &:hover {
+        cursor: pointer;
+        background: var(--sk-yuque-grey-300);
+        border-radius: 10px;
+      }
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      padding-left: 8px;
+      &:hover {
+        cursor: pointer;
+        background: var(--sk-yuque-grey-300);
+        border-radius: 10px;
+      }
+    }
+  }
 `
