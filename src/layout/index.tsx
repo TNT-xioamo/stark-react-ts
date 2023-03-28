@@ -39,7 +39,7 @@ export default memo(function JMSLayout () {
 
   return (
     <Layout onMouseMove={event => handleMouseMove(event)} onMouseUp={event => handleMouseUp(event)}>
-      <Sider className="app-side" trigger={null} collapsedWidth={49}  theme={themes} width={ menuSide } collapsible collapsed={collapse}  onMouseEnter={() => handleSetIsHovered(true)} onMouseLeave={() => handleSetIsHovered(false)}>
+      <Sider className="app-side" trigger={null} collapsedWidth={45}  theme={themes} width={ menuSide } collapsible collapsed={collapse}  onMouseEnter={() => handleSetIsHovered(true)} onMouseLeave={() => handleSetIsHovered(false)}>
         { foldIcon ? <JMSResizebar /> : '' }
         <DragAside onMouseDown={event => handleMouseDown(event)} />
         <JMSUserInfo logo={sysLogo}></JMSUserInfo>
