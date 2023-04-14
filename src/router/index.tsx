@@ -17,6 +17,7 @@ export interface RouteObject {
 const routes: RouteObject[] = [
   { path: '/', auth: false, element: <JMSHomePage />,},
   { path: '/vue-quality-education',  auth: false, element: <JMSEducation /> },
+  
 ]
 
 export default routes
