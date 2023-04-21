@@ -3,7 +3,7 @@ import { lazy } from 'react'
 
 const JMSHomePage = lazy(() => import('@/views/homePage'))
 const JMSEducation = lazy(() => import('@/views/microservices/education'))
-// import JMSEducation from '@/views/microservices/education'
+const JMSTrainOne = lazy(() => import('@/views/microservices/subsystem-trainOne'))
 
 export interface RouteObject {
   caseSensitive?: boolean;
@@ -17,7 +17,7 @@ export interface RouteObject {
 const routes: RouteObject[] = [
   { path: '/', auth: false, element: <JMSHomePage />,},
   { path: '/vue-quality-education',  auth: false, element: <JMSEducation /> },
-  
+  { path: '/subsystem-trainOne',  auth: false, element: <JMSTrainOne /> },
 ]
 
 export default routes

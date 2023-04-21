@@ -8,16 +8,25 @@ import './style/animista.css'
 import './style/variable.css'
 import { ConfigProvider } from 'antd'
 
-import { registerMicroApps, start } from 'qiankun'
+import { registerMicroApps, loadMicroApp , start, MicroApp } from 'qiankun'
 
-registerMicroApps([
-  {
-    name: 'vue-quality-education',
-    container: '#vue-quality-education',
-    entry: 'http://localhost:3100/',
-    activeRule: '/vue-quality-education',
-  }
-])
+// const loadMicroApp = async () => {
+  
+// }
+// loadMicroApp([
+//   {
+//     name: 'vue-quality-education',
+//     container: '#vue-quality-education',
+//     entry: '//127.0.0.1:3100/',
+//     activeRule: '/vue-quality-education',
+//   },
+//   {
+//     name: 'Trainone',
+//     container: '#subsystem-trainOne',
+//     entry: '//127.0.0.1:9528/',
+//     activeRule: '/subsystem-trainOne',
+//   }
+// ])
 // 启动
 start({
   sandbox: {

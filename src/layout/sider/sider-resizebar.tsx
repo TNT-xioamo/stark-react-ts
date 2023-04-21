@@ -15,7 +15,7 @@ export default memo(function JMSResizebar(props) {
   }
   return (
     <LeaderAside>
-      <div className='resize-bar-slu flex-center flip-vertical-right' onClick={ () => handleSdise() }>{ !collapse ? <CaretLeftOutlined /> : <CaretRightOutlined /> }</div>
+      <div className='resize-bar-slu flex-center flip-vertical-right' onClick={ () => handleSdise() }>{ !collapse ? <CaretRightOutlined />  : <CaretLeftOutlined /> }</div>
     </LeaderAside>
   )
 })

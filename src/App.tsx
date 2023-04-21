@@ -32,7 +32,7 @@ function App() {
   }
 
   const handleToVue = () => {
-    action.setGlobalState({ token: 'admin' })
+    action.setGlobalState({ token: '' })
     navigate('/vue-quality-education')
   }
 
