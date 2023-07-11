@@ -21,10 +21,10 @@ code {
 
 #root .ant-layout {
   height: 100%;
-  background: var(--sk-white);
+  /* background: var(--sk-white); */
+  background-color: transparent;
 }
 #root .ant-layout .app-side {
-  
   position: relative;
   padding: 10px 0 0 0;
 }
@@ -33,9 +33,17 @@ code {
 }
 
 #root .ant-layout .ant-layout-sider-light {
-  background: #fafafa;
+  background-color: transparent;
 }
 .sidebar-user-info {
   padding-right: 12px;
   padding-left: 12px;
+}
+
+  
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 4;
 }

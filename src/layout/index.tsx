@@ -7,7 +7,7 @@ import { Layout, theme } from 'antd'
 import JMSLayoutContent from '@/layout/content'
 import { DragAside } from './sider/sider-style'
 import JMSResizebar from './sider/sider-resizebar'
-import JMSUserInfo from '@/views/homePopoverModule/module-user-info'
+import JMSUserInfo from '@/views/home-popover-module/module-user-info'
 const { Sider, Content,  } = Layout
 
 export default memo(function JMSLayout () {
@@ -38,10 +38,10 @@ export default memo(function JMSLayout () {
   }
 
   return (
-    <Layout onMouseMove={event => handleMouseMove(event)} onMouseUp={event => handleMouseUp(event)}>
+    <Layout className='fixed' onMouseMove={event => handleMouseMove(event)} onMouseUp={event => handleMouseUp(event)}>
       <Sider className="app-side" trigger={null} collapsedWidth={45}  theme={themes} width={ menuSide } collapsible collapsed={collapse}  onMouseEnter={() => handleSetIsHovered(true)} onMouseLeave={() => handleSetIsHovered(false)}>
         { foldIcon ? <JMSResizebar /> : '' }
-        <DragAside onMouseDown={event => handleMouseDown(event)} />
+        {/* <DragAside onMouseDown={event => handleMouseDown(event)} /> */}
         <JMSUserInfo logo={sysLogo}></JMSUserInfo>
       </Sider>
       <Layout>

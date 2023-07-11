@@ -21,7 +21,7 @@ export const LeaderAside = styled.div `
 `
 export const DragAside = styled.div `
   position: absolute;
-  z-index: 2;
+  z-index: 16;
   top: 0;
   bottom: 0;
   right: -6px;

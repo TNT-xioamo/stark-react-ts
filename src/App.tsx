@@ -6,6 +6,7 @@ import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
 
 import store from './store'
+import { Wallpaper } from '@/views/home-page-module/home-style'
 import action from '@/shared/actions'
 import { FloatButton, Popover } from 'antd'
 import { CommentOutlined, SettingOutlined, HeatMapOutlined } from '@ant-design/icons'
@@ -49,6 +50,7 @@ function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
+      <Wallpaper />
         <JMSLayout />
       </PersistGate>
       <FloatButton.Group trigger="click" icon={<SettingOutlined />}>

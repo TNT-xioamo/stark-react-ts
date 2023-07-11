@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 // import { RouteObject } from 'react-router-dom'
 
-const JMSHomePage = lazy(() => import('@/views/homePage'))
+const JMSHomePage = lazy(() => import('@/views/home-page-module'))
 const JMSEducation = lazy(() => import('@/views/microservices/education'))
 const JMSTrainOne = lazy(() => import('@/views/microservices/subsystem-trainOne'))
 
