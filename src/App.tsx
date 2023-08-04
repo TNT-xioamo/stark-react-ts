@@ -9,7 +9,8 @@ import store from './store'
 import { Wallpaper } from '@/views/home-page-module/home-style'
 import action from '@/shared/actions'
 import { FloatButton, Popover } from 'antd'
-import { CommentOutlined, SettingOutlined, HeatMapOutlined } from '@ant-design/icons'
+import { FiGitlab, FiGrid, FiInstagram } from "react-icons/fi";
+
 
 
 
@@ -53,11 +54,11 @@ function App() {
       <Wallpaper />
         <JMSLayout />
       </PersistGate>
-      <FloatButton.Group trigger="click" icon={<SettingOutlined />}>
+      <FloatButton.Group trigger="click" icon={<FiGrid />}>
         <Popover trigger="click" placement="leftTop" arrow={false} content={ <a onClick={() => {}}>Close</a> }>
-          <FloatButton icon={<CommentOutlined />} onClick={ () => handleFloatSys() } />
+          <FloatButton icon={<FiGitlab />} onClick={ () => handleFloatSys() } />
         </Popover>
-        <FloatButton icon={<HeatMapOutlined />} onClick={ () => handleFloatNotice() } />
+        <FloatButton icon={<FiInstagram />} onClick={ () => handleFloatNotice() } />
       </FloatButton.Group>
       <FloatButton.BackTop />
     </Provider>
