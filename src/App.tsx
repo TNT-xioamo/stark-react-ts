@@ -9,10 +9,7 @@ import store from './store'
 import { Wallpaper } from '@/views/home-page-module/home-style'
 import action from '@/shared/actions'
 import { FloatButton, Popover } from 'antd'
-import { FiGitlab, FiGrid, FiInstagram } from "react-icons/fi";
-
-
-
+import { FiGitlab, FiGrid, FiInstagram } from 'react-icons/fi'
 
 
 import JMSLayout from '@/layout'
