@@ -2,7 +2,8 @@ import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import StingReducer from './reducers/settings'
-import { SETTING_FEATURE_KEY } from './store-type'
+import Desktop from './reducers/desktop'
+import { SETTING_FEATURE_KEY, DESKTOP_FEATURE_KEY } from './store-type'
 
 import { persistReducer } from 'redux-persist'
 
@@ -18,6 +19,7 @@ const persistConfig = {
 
 const reducers = combineReducers({
   [SETTING_FEATURE_KEY]: StingReducer,
+  [DESKTOP_FEATURE_KEY]: Desktop
 })
 
 

@@ -6,9 +6,9 @@ export default memo(function JMSLayoutContent() {
   return (
     <>
       <main className='app-main'>
-      <Suspense fallback={<Spin />}>
-        <JMSLayoutMain />
-      </Suspense>
+        <Suspense fallback={<Spin />}>
+          <JMSLayoutMain />
+        </Suspense>
       </main>
     </>
   )

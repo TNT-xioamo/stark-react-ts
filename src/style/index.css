@@ -23,6 +23,12 @@ code {
   height: 100%;
   /* background: var(--sk-white); */
   background-color: transparent;
+  display: flex;
+  width: 100%;
+}
+#root .ant-layout .app-main {
+  width: 100%;
+  height: 100%;
 }
 #root .ant-layout .app-side {
   position: relative;
