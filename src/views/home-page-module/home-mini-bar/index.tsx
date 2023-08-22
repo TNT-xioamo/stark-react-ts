@@ -35,7 +35,7 @@ export default memo(function HomeMiniBar() {
         <div key={item?.value} className='bar-item' onClick={() => handle_open_ai(item['value'])}>
           <div className='item-inner flex-center' >
             <Tooltip title={ item.label }>
-              { iconlist[index] }
+              <div>{ <>{ iconlist[index] }</> }</div>
             </Tooltip>
           </div>
         </div>
