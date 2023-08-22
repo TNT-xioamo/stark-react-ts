@@ -18,7 +18,27 @@ export const Wallpaper = styled.div `
 
 export const HomePageMain = styled.div `
   height: 100%;
-  .home-bar {}
+  .bar-cnt {
+    width: 100%;
+    position: sticky;
+    top: 20px;
+    .bar-cnt_inner {
+      max-width: 400px;
+      background-color: #171717;
+      padding: 8px 0;
+      border-radius: 10px;
+      .bar-item {
+        .item-inner {
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          font-size: 20px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
   .home-mini_bar {
     width: 20vw;
     background-color: #171717;

@@ -15,7 +15,7 @@ type UseClickOutProps = {
  * @returns boolean
  */
 
-const isClickDomOutside = (domTargetRefArr: React.MutableRefObject<HTMLElement>[], targetDom: HTMLElement) => {
+const isClickDomOutside = (domTargetRefArr: React.RefObject<HTMLElement>[], targetDom: HTMLElement) => {
   for (const domRef of domTargetRefArr) {
     const realDom = ReactDOM.findDOMNode(domRef?.current)
     if (realDom?.contains(targetDom)) return false
