@@ -1,13 +1,23 @@
-import React, { memo } from 'react'
+import React, { memo, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { SET_DESKTOP_BAR } from '@/store/reducers'
+import useClickOut from '@/hooks/useClickOut'
 
 export default memo(function HomeMiniBar() {
   const upDateBar = useDispatch()
+  const popoverRef = useRef<HTMLDivElement>(null)
+
   const { showBar } = useSelector((state: any) => state?.desktop)
 
+  useClickOut({
+    domTargetRef : [popoverRef],
+    onClickOut: (e: Event) => {
+      console.log('poker face')
+      upDateBar(SET_DESKTOP_BAR(false))
+    }
+  })
+
   const handle_mini_bar = () => {
-    console.log(showBar)
     upDateBar(SET_DESKTOP_BAR(true))
   }
 
@@ -15,10 +25,10 @@ export default memo(function HomeMiniBar() {
   return (
     <>
      <div className='home-bar'>
-        <div className='home-mini_bar flex-center' onClick={() => handle_mini_bar()}>
-          <div className='mini-bar_line'></div>
-        </div>
-        { !showBar ? <div className='bar-cnt'>qweqweqw</div> : void 0 }
+      { 
+        !showBar ? <div className='home-mini_bar flex-center' onClick={() => handle_mini_bar()}><div className='mini-bar_line'></div>
+          </div> : <div ref={popoverRef} className='bar-cnt'>qweqweqw</div>
+      }
      </div>
     </>
   )

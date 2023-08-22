@@ -8,7 +8,7 @@ const { reducer: Desktop, actions }  = createSlice({
   },
   reducers: {
     SET_DESKTOP_BAR: (state, action) => {
-      state.showBar = !state.showBar
+      state.showBar = action.payload
     }
   }
 })
